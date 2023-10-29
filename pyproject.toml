@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rna_strand_storage"
+name = "data_squirrel_demo"
 version = "0.0.0.1"
 description = "Save rna data at time of generation and share via common Python API"
 readme = "README.md"
