@@ -5,8 +5,7 @@ import os
 
 from rna_strand.rna_nupack_api import RNAStrand
 
-from rna_squirrel.make_single_api_file import GenerateSingleApifile
-
+from data_squirrel.make_single_api_file import GenerateSingleApifile
 
 def test_make_api_file():
     new_generator:GenerateSingleApifile = GenerateSingleApifile()
@@ -16,7 +15,7 @@ def test_make_api_file():
     assert os.path.isfile(Path('/home/rnauser/dev_data/rna_nupack_api.py'))==True
 
 def test_call_dynamic_api():
-    rna_strand_num_1:RNAStrand = RNAStrand(var_name='rna_strand_num_1',
+    rna_strand_num_2:RNAStrand = RNAStrand(var_name='rna_strand_num_2',
                     working_folder='/home/rnauser/dev_data/')
-    rna_strand_num_1.primary_structure.strand = "AUGGCACA"
-    assert rna_strand_num_1.primary_structure.strand == "AUGGCACA_returned"
+    rna_strand_num_2.primary_structure.strand = "AUGGCACA"
+    assert rna_strand_num_2.primary_structure.strand == "AUGGCACA_returned"
